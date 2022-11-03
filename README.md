@@ -10,7 +10,7 @@ $ ./create-scsi-loopback.sh
 ```
 Launch the containers:
   + `pr-helper` contains the `qemu-pr-helper` and `seitan`
-  + `qemu` contains the `QEMU` and the `seitan-loader`
+  + `qemu` contains`QEMU`, the VM disk image and the `seitan-loader`
 
 ```bash
 $ ./run-containers.sh /dev/sdb
@@ -25,8 +25,7 @@ c6097f6e791fbab120cce284361a379d59733635d3e9c323bdf7f729d6fa3a7a
 
 You can attach to the `qemu` container and log into the guest to try the scsi reservation:
 ``` bash
-$ docker attach qemu
-edora login: 
+$ docker attach qemu 
 fedora login: root
 Password: 
 [root@fedora ~]# lsblk
