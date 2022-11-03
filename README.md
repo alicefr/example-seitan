@@ -23,7 +23,7 @@ c6097f6e791fbab120cce284361a379d59733635d3e9c323bdf7f729d6fa3a7a
 + docker exec -td pr-helper ./seitan 190485
 ```
 
-You can attach to QEMU and lon into the guest:
+You can attach to the `qemu` container and log into the guest to try the scsi reservation:
 ``` bash
 $ docker attach qemu
 edora login: 
