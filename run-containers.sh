@@ -1,15 +1,15 @@
 #!/bin/bash 
 
-set -x
-
 if [ -z $1 ]; then
-	"Missing the scsi disk"
-	exit 1
+  echo "Missing the scsi disk"
+  exit 1
 fi
 DISK=$1
 
 docker rm -f pr-helper
 docker rm -f qemu
+
+set -xe
 
 docker run -ti -d --name pr-helper \
   -w  /usr/local/seitan/ \
@@ -37,4 +37,4 @@ docker run --name qemu --security-opt label=disable \
 
 pid=$(docker inspect --format "{{.State.Pid}}" qemu)
 
-docker exec -ti pr-helper ./seitan $pid
+docker exec -td pr-helper ./seitan $pid
