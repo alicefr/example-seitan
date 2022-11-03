@@ -1,4 +1,4 @@
-# Example with seitan and SCSI persistent reservation
+# Example with seitan and the SCSI persistent reservation
 
 This repository contains a self-contained example to try [seitan](https://seitan.rocks/seitan/about/) and the SCSI persistent reservation using QEMU and the [qemu-pr-helper daemon](https://qemu.readthedocs.io/en/latest/tools/qemu-pr-helper.html).
 
