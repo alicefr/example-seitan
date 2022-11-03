@@ -4,7 +4,7 @@ This repository contains a self-contained example to try [seitan](https://seitan
 
 ## How to run the example
 
-Create a SCSI loopback device using the targetcli:
+Create a SCSI loopback device using `targetcli`:
 ```bash
 $ ./create-scsi-loopback.sh
 ```
@@ -39,14 +39,14 @@ sda      8:0    0    5G  0 disk
 └─sda5   8:5    0  4.4G  0 part /home
                                 /
 sdb      8:16   0    1G  0 disk 
-[root@fedora ~]# sg_persist -i -k /dev/sdb
+[root@fedora ~] sg_persist -i -k /dev/sdb
   LIO-ORG   disk1             4.0 
   Peripheral device type: disk
   PR generation=0x0, there are NO registered reservation keys
-[root@fedora ~]#  sg_persist -o -G  --param-sark=12345678 /dev/sdb
+[root@fedora ~]  sg_persist -o -G  --param-sark=12345678 /dev/sdb
   LIO-ORG   disk1             4.0 
   Peripheral device type: disk
-[root@fedora ~]# sg_persist -i -k /dev/sdb
+[root@fedora ~] sg_persist -i -k /dev/sdb
   LIO-ORG   disk1             4.0 
   Peripheral device type: disk
   PR generation=0x1, 1 registered reservation key follows:
